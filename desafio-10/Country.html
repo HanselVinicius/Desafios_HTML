@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+</head>
+<body>
+    <h1>Sistema de Países</h1>
+    <input type="text" id="txtc">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verifica(){
+            var Country=window.document.getElementById("txtc")
+            var Country=String(txtc.value)
+            var res=window.document.getElementById("res")
+            res.innerHTML=`<p>Você mora no País:<strong>${Country}</strong></p>`
+            if(Country=='Brasil'||Country=='brasil'){
+                res.innerHTML+='<p>Você é <strong>Brasileiro</strong></p>'
+            }else{
+                res.innerHTML+='<p>Você é <strong>Estrangeiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
